@@ -13,11 +13,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATION'] = False
 app.secret_key = 'jose'
 api = Api(app)
 
-@app.before_first_request
-def create_tables():
-    db.create_all()
-
-
 jwt = JWT(app , authenticate , identity) #creates new endpoint /auth
 
 
@@ -37,4 +32,4 @@ if __name__ == '__main__':
     db.init_app(app)
     app.run( port = 5000 , debug=True)
 #this prevents from error and app.run will work only if it is run as primary
-#but not called from other file
+#but not called from other file (circular imports)

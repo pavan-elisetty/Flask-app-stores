@@ -1,4 +1,4 @@
-import sqlite3
+from flask import make_response, render_template
 from flask_restful import Resource , reqparse
 from models.user import UserModel
 
@@ -28,5 +28,10 @@ class UserRegister(Resource):
         user.save_to_db()
         return {"message": "user created sucessfully"} , 201 #201 for created
 
-
+class Home(Resource):
+    def get(self):
+        headers = {"Content-Type": "text/html"}
+        return make_response(
+            render_template("home.html"), 200, headers
+        )
 

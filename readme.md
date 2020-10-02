@@ -6,4 +6,6 @@ Deployed on HEROKU.
 
 The possible end points of the API can be seen on the home page of REST API
 
-[Stores-Rest-API][https://stores-rest-api-pavan.herokuapp.com/]
+>Find the Rest API here
+
+[Stores-Rest-API](https://stores-rest-api-pavan.herokuapp.com/)

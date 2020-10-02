@@ -8,7 +8,7 @@ from security import authenticate , identity
 from resources.user import UserRegister
 from resources.item import Item , ItemList
 from resources.store import Store , StoreList
-
+from resources.user import Home
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL','sqlite:///data.db')
@@ -27,7 +27,7 @@ api.add_resource(Item , '/item/<string:name>')
 api.add_resource(ItemList , '/items')
 
 api.add_resource(UserRegister , '/register')
-
+api.add_resource(Home,'/')
 
 
 

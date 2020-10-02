@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link href="{{url_for('static', filename='home.css')}}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="a">
+        <h2>
+            Flask Stores Rest Api
+        </h2>
+        <div class="con">
+            The Rest Api built with Flask Restful , Flask-JWT , Flask-SQL Alchemy and Portgree SQL and these are
+            deployed on HEROKU.
+            The Api contains User Registration , Authentication and a database to store items and stores.
+            The rest Api are flexible and easy to integrate with your application and also easy to modify as per your
+            frontend applicaion and requirement
+             To rest the Api , we strongly recommend to test with : <br>
+            <a href="https://www.postman.com/">Postman development environment.</a>
+        </div>
+    </div>
+    <div class="b">
+        <br>
+       
+        <h3>
+            <u>End points of API</u>
+        </h3>
+        <div class="methods">
+            <p>
+                <strong>API methods:</strong> 
+            </p>
+            <p>
+                <strong>GET</strong> ---------------------------------> '/' Home
+            </p>
+
+            <p>
+                <strong>POST</strong> --------------------------------> '/register' - User Registration
+            </p>
+            <p>
+                <strong>POST</strong> ---------------------------------> '/auth - User authentication
+            </p>
+            <p>
+                <strong>GET</strong> ----------------------------------> '/items' - To get all the items
+            </p>
+            <p>
+                <strong>GET , POST</strong> ------------------------> '/item/< string:name>' - To get and post the item
+            </p>
+            <p>
+                <strong>GET</strong> ----------------------------------> '/stores' - To get all the stores
+            </p>
+            <p>
+                <strong>GET , POST</strong> ------------------------> '/store/< string:name>' - To get and post the store
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
